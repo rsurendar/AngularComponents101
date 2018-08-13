@@ -1,5 +1,4 @@
-import { Component, Input, OnInit, Output, EventEmitter, OnDestroy, OnChanges } from '@angular/core';
-import { setTimeout, setTimeout, setTimeout, clearTimeout, clearTimeout, console, console } from './countdown.component';
+import { Component, Input, OnInit, Output, EventEmitter, OnDestroy, OnChanges , SimpleChanges} from '@angular/core';
 @Component({
   selector: 'app-countdown',
   templateUrl: './countdown.component.html',
@@ -11,6 +10,9 @@ export class CountdownComponent implements OnInit, OnDestroy, OnChanges {
   }
   ngOnInit(): void {
     this.startCountdown();
+  }
+  ngOnChanges(chanages: SimpleChanges): void {
+this.startCountdown();
   }
   @Input()
   init: number = null;

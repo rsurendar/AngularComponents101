@@ -56,3 +56,4 @@ ngOnChanges(changes: SimpleChanges): void {
     this.startCountdown();
     }
 }
+ 
